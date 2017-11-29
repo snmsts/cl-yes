@@ -33,7 +33,7 @@ OPTION
                 ((or (member "-v" argv :test #'string=)
                      (member "--version" argv :test #'string=))
                  (format t "cl-yes v0.1~%~%"))
-                (t (cl-yes:yes *standard-output* (first argv))))
-          (cl-yes:yes *standard-output*))
+                (t (cl-yes:yes (first argv))))
+          (cl-yes:yes))
     (condition (e) (declare (ignore e)) nil)))
 ;;; vim: set ft=lisp lisp:
